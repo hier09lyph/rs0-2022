@@ -12,13 +12,13 @@
 
     });
 
-    if (window.innerWidth <= 390) {
-        for (let i = 0; i < menuCloseItem.length; i++) {
-            menuCloseItem[i].addEventListener('click', () => {
-                menu.classList.remove('burger-menu-active')
-            })
-        }
-    };
+    // if (window.innerWidth < 391) {
+    for (let i = 0; i < menuCloseItem.length; i++) {
+        menuCloseItem[i].addEventListener('click', () => {
+            menu.classList.remove('burger-menu-active')
+        })
+    }
+    // };
 }())
 
 
