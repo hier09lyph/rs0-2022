@@ -717,8 +717,7 @@ body {
         background-color: #F2785C;
         border-radius: 10px;
         position: absolute;
-        margin-top: 0px;
-        margin-left: 54%;
+        right: 0;
         z-index: 2;
         transform: translateY(-120%);
         transition: .3s all linear;
