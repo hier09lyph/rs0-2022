@@ -584,6 +584,116 @@ body {
 }
 
 @media (max-width: 850px) {
+    .header-nav {
+        display: none;
+    }
+    .destination-img1 {
+        width: 360px;
+        height: 210px;
+        background-size: cover;
+        background-image: url(../travel/img/spain-mobile.jpg)
+    }
+    .destination-img2 {
+        width: 360px;
+        height: 210px;
+        background-size: cover;
+        background-image: url(../travel/img/spain-img.jpg)
+    }
+    .destination-img3 {
+        width: 360px;
+        height: 210px;
+    }
+    .burger {
+        display: inline;
+        height: 32px;
+        width: 35px;
+        cursor: pointer;
+        background: url(../travel/img/svg/burger-open.svg) no-repeat center;
+        background-size: contain;
+    }
+    .header {
+        height: 30px;
+        margin-top: 45px;
+        background: none;
+        box-shadow: none;
+        position: relative;
+        z-index: 1;
+    }
+    .header-wrapper {
+        position: relative;
+        z-index: 1;
+        /* overflow: hidden; */
+    }
+    .burger-menu {
+        /* display: none; */
+        display: inline;
+        width: 165px;
+        height: 250px;
+        background-color: #F2785C;
+        border-radius: 10px;
+        position: absolute;
+        right: 0;
+        z-index: 2;
+        transform: translateY(-120%);
+        transition: .3s all linear;
+    }
+    .burger-menu-active {
+        transform: translateY(0);
+    }
+    .header-nav-burger {
+        height: 176px;
+    }
+    .header-list-burger {
+        width: 150;
+        padding-left: 7px;
+        padding-right: 7px;
+        height: 176px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    .close {
+        margin-top: 15px;
+        margin-left: 15px;
+        margin-bottom: 15px;
+        cursor: pointer;
+    }
+    .header-link {
+        font-size: 16px;
+        line-height: 21px;
+    }
+    .header-nav {
+        display: none;
+    }
+    .footer-rights,
+    .login-form,
+    .prewiew-subtitle {
+        display: none;
+    }
+    .destination-img1 {
+        width: 540px;
+        height: 315px;
+        background-size: cover;
+        background-image: url(../travel/img/spain-mobile.jpg)
+    }
+    .destination-img2 {
+        width: 540px;
+        height: 315px;
+        background-size: cover;
+        background-image: url(../travel/img/spain-img.jpg)
+    }
+    .destination-img3 {
+        width: 540px;
+        height: 315px;
+    }
+    .search-form-info {
+        flex-wrap: wrap;
+    }
+    .search-form-info:last-child {
+        padding-right: 10px;
+        margin-top: 30px;
+    }
     .travel-stories {
         padding-top: 40px;
     }
@@ -624,6 +734,22 @@ body {
         color: #0D606F;
     }
 }
+
+
+/* @media (max-width: 680px) {
+    .search-form-info {
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .search-form-field {
+        margin-bottom: 50px;
+    }
+} */
 
 @media (max-width: 390px) {
     body {
