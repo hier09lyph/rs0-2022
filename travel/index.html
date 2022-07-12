@@ -12,16 +12,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,400;1,700&family=Homenaje&family=Red+Hat+Text:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    <!-- <link rel="script" href="index.js"> -->
+
 </head>
 
 <body>
+
+
     <header class="header">
         <div class="wrapper">
             <div class="header-wrapper">
                 <div class="header-logo">
                     <a href="/" class="header-logo-link">
-                        <img src="./img/svg/logo.svg" alt="TravelPortal" class="header-logo-pik">
+                        <div class="header-logo">
+                            <img src="../travel/img/svg/logo.svg" alt="TravelPortal" class="header-logo-pik-big">
+                            <img src="../travel/img/svg/logo-small.svg" alt="TravelPortal" class="header-logo-pik-small">
+
+                        </div>
+
                     </a>
                 </div>
 
@@ -43,6 +50,35 @@
                 </nav>
                 <div class="button">
                     <button type="submit" class="login-form">Login</button>
+                </div>
+                <div class="burger"></div>
+                <div class="burger-menu">
+                    <div class="close-icon">
+                        <img class=close src="../travel/img/svg/burger-close.svg" alt="close-icon">
+                    </div>
+                    <nav class="header-nav-burger">
+                        <ul class="header-list-burger">
+
+                            <li class="header-item-burger">
+                                <a href="#prewiew" class="header-link">How It Works</a>
+                            </li>
+                            <li class="header-item-burger">
+                                <a href="#steps" class="header-link">Plan Your Trip</a>
+                            </li>
+                            <li class="header-item-burger">
+                                <a href="#destinations" class="header-link">Destinations</a>
+                            </li>
+                            <li class="header-item-burger">
+                                <a href="#stories" class="header-link">Travel Stories</a>
+                            </li>
+                            <li class="header-item-burger">
+                                <a href="#!" class="header-link">Account</a>
+                            </li>
+                            <li class="header-item-burger">
+                                <a href="#footer" class="header-link">Social Media</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
 
             </div>
@@ -80,15 +116,15 @@
                     <div class="three-steps">
                         <div class="first-step">
                             <img src="../travel/img/svg/first-step.svg" alt="first-spteps" class="steps-img">
-                            <p class="step-text">Tell us what you want to do</p>
+                            <p class="step-text first">Tell us what you want to do</p>
                         </div>
                         <div class="second-step">
                             <img src="../travel/img/svg/second-step.svg" alt="second-spteps" class="steps-img">
-                            <p class="step-text">Share us preferable dates </p>
+                            <p class="step-text ">Share us preferable dates </p>
                         </div>
-                        <div class="third-step">
+                        <div class="third-step ">
                             <img src="../travel/img/svg/third-step.svg" alt="third-spteps" class="steps-img">
-                            <p class="step-text">We will give you recommendations</p>
+                            <p class="step-text third">We will give you recommendations</p>
                         </div>
                     </div>
                 </div>
@@ -96,11 +132,8 @@
             </div>
         </section>
         <section class="destinations" id="destinations">
-            <div class="h2">
-                <h2 class="subtitle">
-                    POPULAR DESTINATIONS
-                </h2>
-            </div>
+
+            <h2 class="subtitle">POPULAR DESTINATIONS</h2>
 
             <div class="destination-slider">
                 <div class="destination-img1">
@@ -114,18 +147,26 @@
                 </div>
 
             </div>
+            <div class="arrow">
+                <div class="arrow-left"></div>
+                <div class="arrow-right"></div>
+            </div>
             <div class="slider-ellipse">
 
-                <div class="slider-ellipse-side"></div>
+                <div class="slider-ellipse-side ellipse-first"></div>
                 <div class="slider-ellipse-center"></div>
                 <div class="slider-ellipse-side"></div>
+                <div class="slider-ellipse-side ellipse-last"></div>
             </div>
 
-            <button type="submit" class="bt-more"><img src="../travel/img/svg/bt-pointer.svg" alt="bt-pointer"> Find More</button>
+            <button type="submit" class="bt-more"> Find More</button>
         </section>
-        <section class="stories" id="stories">
-            <div class="wrapper">
-                <h2 class="subtitle">TRAVEL STORIES</h2>
+        <div class="down-bg">
+            <section class="stories" id="stories">
+                <h2 class="subtitle travel">TRAVEL STORIES</h2>
+
+
+
                 <div class="wrapper-stories">
                     <div class="travel-stories">
                         <div class="travel-story">
@@ -138,6 +179,10 @@
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
                                     in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet,
                                     consectetur adipiscing elit... <a href="#!" class="story-href">Read More</a>
+                                </p>
+                                <p class="story-text-mobile" lang="zxx">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a... <a href="#!" class="story-href">Read More</a>
                                 </p>
                             </div>
                         </div>
@@ -152,6 +197,10 @@
                                     in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet,
                                     consectetur adipiscing elit... <a href="#!" class="story-href">Read More</a>
                                 </p>
+                                <p class="story-text-mobile" lang="zxx">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a... <a href="#!" class="story-href">Read More</a>
+                                </p>
                             </div>
                         </div>
                         <div class="travel-story">
@@ -164,6 +213,10 @@
                                     Lorem ipsum dolor sit a met, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
                                     in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet,
                                     consectetur adipiscing elit... <a href="#!" class="story-href">Read More</a>
+                                </p>
+                                <p class="story-text-mobile" lang="zxx">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a... <a href="#!" class="story-href">Read More</a>
                                 </p>
                             </div>
                         </div>
@@ -178,43 +231,50 @@
                                     in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet,
                                     consectetur adipiscing elit... <a href="#!" class="story-href">Read More</a>
                                 </p>
+                                <p class="story-text-mobile" lang="zxx">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a... <a href="#!" class="story-href">Read More</a>
+                                </p>
                             </div>
                         </div>
-                        <button type="submit" class="bt-more see-more">
-                            <img src="../travel/img/svg/bt-pointer.svg" alt="bt-pointer">
-                              See More</button>
+                        <button type="submit" class="bt-more see-more">See More</button>
                     </div>
 
                 </div>
-            </div>
-        </section>
+                <!-- </div> -->
+            </section>
+            <footer class="footer" id="footer">
+                <div class="wrapper footer-wraper">
+                    <div class="footer-links">
+                        <div class="footer-link">
+                            <a href="https://github.com/hier09lyph">
+                                <img src="../travel/img/svg/insta.svg" alt="instagram">
+                            </a>
+                        </div>
+                        <div class="footer-link">
+                            <a href="https://rs.school/js-stage0/">
+                                <img src="../travel/img/svg/youtube.svg" alt="youtube">
+                            </a>
+                        </div>
+                        <div class="footer-link">
+                            <a href="https://rs.school/js-stage0/">
+                                <img src="../travel/img/svg/twit.svg" alt="twiter">
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="footer-rights">
+                        <p>All Rights Reserved © Travel Portal</p>
+
+                    </div>
+                </div>
+
+
+
+            </footer>
+        </div>
     </main>
-    <footer class="footer">
 
-        <div class="footer-links">
-            <div class="footer-link">
-                <a href="https://rs.school/js-stage0/">
-                    <img src="../travel/img/svg/insta.svg" alt="instagram">
-                </a>
-            </div>
-            <div class="footer-link">
-                <a href="https://rs.school/js-stage0/">
-                    <img src="../travel/img/svg/youtube.svg" alt="youtube">
-                </a>
-            </div>
-            <div class="footer-link">
-                <a href="https://rs.school/js-stage0/">
-                    <img src="../travel/img/svg/twit.svg" alt="twiter">
-                </a>
-            </div>
-
-        </div>
-        <div class="footer-rights">
-            <p>All Rights Reserved © Travel Portal</p>
-
-        </div>
-
-    </footer>
     <script src="../travel/index.js"></script>
 </body>
 
