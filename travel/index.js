@@ -131,28 +131,6 @@ const ellipseThird = document.querySelector('.ellipse-third');
 
 ellipseSecond.style.opacity = '1';
 
-if (document.documentElement.clientWidth > 390) {
-    document.addEventListener('click', (e) => { // Вешаем обработчик на весь документ
-        if (e.target === img3 || e.target === ellipseThird) { // Img3
-            slider.style.transform = 'translate(-34.5%, 0)';
-            ellipseSecond.style.opacity = '.5';
-            ellipseThird.style.opacity = '1';
-            ellipseFirst.style.opacity = '.5';
-        }
-        if (e.target === img2 || e.target === ellipseSecond) { // Img2
-            slider.style.transform = 'translate(0, 0)';
-            ellipseSecond.style.opacity = '1';
-            ellipseThird.style.opacity = '.5';
-            ellipseFirst.style.opacity = '.5';
-        }
-        if (e.target === img1 || e.target === ellipseFirst) { // Img1
-            slider.style.transform = 'translate(34%, 0)';
-            ellipseSecond.style.opacity = '.5';
-            ellipseThird.style.opacity = '.5';
-            ellipseFirst.style.opacity = '1';
-        }
-    });
-}
 
 const arrowLeft = document.querySelector('.arrow-left');
 const arrowRight = document.querySelector('.arrow-right');
@@ -160,49 +138,50 @@ const arrowRight = document.querySelector('.arrow-right');
 arrowLeft.style.opacity = '1';
 arrowRight.style.opacity = '1';
 
-if (document.documentElement.clientWidth <= 390) {
-    document.addEventListener('click', (e) => { // Вешаем обработчик на весь документ
+
+document.addEventListener('click', (e) => {
 
 
-        if ((e.target === arrowLeft && arrowLeft.style.opacity === '1' && arrowRight.style.opacity === '1') ||
-            e.target === ellipseFirst) { // Img1
-            slider.style.transform = 'translate(34%, 0)';
-            arrowLeft.style.opacity = '0.5'
-            arrowRight.style.opacity = '1'
-            ellipseSecond.style.opacity = '.5';
-            ellipseThird.style.opacity = '.5';
-            ellipseFirst.style.opacity = '1';
-        }
+    if ((e.target === arrowLeft && arrowLeft.style.opacity === '1' && arrowRight.style.opacity === '1') ||
+        e.target === ellipseFirst || e.target === img1) { // Img1
+        slider.style.transform = 'translate(34%, 0)';
+        arrowLeft.style.opacity = '0.5'
+        arrowRight.style.opacity = '1'
+        ellipseSecond.style.opacity = '.5';
+        ellipseThird.style.opacity = '.5';
+        ellipseFirst.style.opacity = '1';
+    }
 
 
 
-        if ((e.target === arrowRight && arrowLeft.style.opacity === '1' && ellipseSecond.style.opacity === '1') ||
-            e.target === ellipseThird) { // Img3
-            slider.style.transform = 'translate(-34%, 0)';
-            arrowLeft.style.opacity = '1'
-            arrowRight.style.opacity = '0.5'
-            ellipseSecond.style.opacity = '.5';
-            ellipseThird.style.opacity = '1';
-            ellipseFirst.style.opacity = '.5';
-        }
+    if ((e.target === arrowRight && arrowLeft.style.opacity === '1' && ellipseSecond.style.opacity === '1') ||
+        e.target === ellipseThird || e.target === img3) { // Img3
+        slider.style.transform = 'translate(-34%, 0)';
+        arrowLeft.style.opacity = '1'
+        arrowRight.style.opacity = '0.5'
+        ellipseSecond.style.opacity = '.5';
+        ellipseThird.style.opacity = '1';
+        ellipseFirst.style.opacity = '.5';
+    }
 
-        if ((e.target === arrowLeft && arrowLeft.style.opacity === '1' && arrowRight.style.opacity === '0.5') ||
-            e.target === ellipseSecond) { // Img2
-            slider.style.transform = 'translate(0, 0)';
-            arrowLeft.style.opacity = '1';
-            arrowRight.style.opacity = '1';
-            ellipseSecond.style.opacity = '1';
-            ellipseThird.style.opacity = '.5';
-            ellipseFirst.style.opacity = '.5';
-        }
-        if (e.target === arrowRight && arrowRight.style.opacity === '1' && ellipseFirst.style.opacity === '1') { // Img2
-            slider.style.transform = 'translate(0, 0)';
-            arrowLeft.style.opacity = '1';
-            arrowRight.style.opacity = '1';
-            ellipseSecond.style.opacity = '1';
-            ellipseThird.style.opacity = '.5';
-            ellipseFirst.style.opacity = '.5';
-        }
+    if ((e.target === arrowLeft && arrowLeft.style.opacity === '1' && arrowRight.style.opacity === '0.5') ||
+        e.target === ellipseSecond || e.target === img2) { // Img2
+        slider.style.transform = 'translate(0, 0)';
+        arrowLeft.style.opacity = '1';
+        arrowRight.style.opacity = '1';
+        ellipseSecond.style.opacity = '1';
+        ellipseThird.style.opacity = '.5';
+        ellipseFirst.style.opacity = '.5';
+    }
+    if (e.target === arrowRight && arrowRight.style.opacity === '1' && ellipseFirst.style.opacity === '1') { // Img2
+        slider.style.transform = 'translate(0, 0)';
+        arrowLeft.style.opacity = '1';
+        arrowRight.style.opacity = '1';
+        ellipseSecond.style.opacity = '1';
+        ellipseThird.style.opacity = '.5';
+        ellipseFirst.style.opacity = '.5';
+    }
 
-    });
-}
+});
+
+console.log('100/100 \nВсе пункты задания реализованы.')
