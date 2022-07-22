@@ -15,10 +15,10 @@
 
 </head>
 
-<body>
+<body class="body lock-padding">
 
 
-    <header class="header">
+    <header class="header lock-padding">
         <div class="wrapper">
             <div class="header-wrapper">
                 <div class="header-logo">
@@ -49,7 +49,7 @@
                     </ul>
                 </nav>
                 <div class="button">
-                    <button type="submit" class="login-form">Login</button>
+                    <button type="submit" class="header-btn login-form">Login</button>
                 </div>
                 <div class="burger"></div>
                 <div class="burger-menu">
@@ -72,7 +72,7 @@
                                 <a href="#stories" class="header-link">Travel Stories</a>
                             </li>
                             <li class="header-item-burger">
-                                <a href="#!" class="header-link">Account</a>
+                                <a href="#!" class="header-link login-form">Account</a>
                             </li>
                             <li class="header-item-burger">
                                 <a href="#footer" class="header-link">Social Media</a>
@@ -84,8 +84,8 @@
             </div>
 
 
-
         </div>
+
     </header>
     <main class="main">
         <section class="prewiew" id="prewiew">
@@ -151,12 +151,12 @@
                 <div class="arrow-left"></div>
                 <div class="arrow-right"></div>
             </div>
-            <div class="slider-ellipse">
+            <div class="slider-ellipses">
 
-                <div class="slider-ellipse-side ellipse-first"></div>
-                <div class="slider-ellipse-center"></div>
-                <div class="slider-ellipse-side"></div>
-                <div class="slider-ellipse-side ellipse-last"></div>
+                <div class="slider-ellipse ellipse-first"></div>
+                <div class="slider-ellipse ellipse-second"></div>
+                <div class="slider-ellipse ellipse-third"></div>
+                <!-- <div class="slider-ellipse-side ellipse-last"></div> -->
             </div>
 
             <button type="submit" class="bt-more"> Find More</button>
@@ -269,10 +269,67 @@
                     </div>
                 </div>
 
-
+                <div class="cover"></div>
 
             </footer>
-        </div>
+            <div class="popup-bg"></div>
+            <div class="popup">
+                <div class="popup-inner">
+                    <div class="popup-login">
+                        <h4 class="title-popup">Log in to your account</h4>
+                        <button class="btn btn-facebook popup-account-btn" type="button">
+                            <img  src="../travel/img/svg/facebook-logo.svg" class="popup-account-btn-svg" alt="facebook-logo">
+                            <span>Sign In with Facebook</span>
+                        </button>
+                        <button class="btn btn-google popup-account-btn" type="button">
+                            <img  src="../travel/img/svg/google-logo.svg" class="popup-account-btn-svg" alt="google-logo">
+                            <span>Sign In with Google</span>
+                        </button>
+                        <div class="line-or">
+                            <div class="line"></div>
+                            <div class="line-or-text">or</div>
+                            <div class="line"></div>
+                        </div>
+                        <form class="login-form-popup" action="#">
+                            <label class="form-item">
+                                <span class="form-item-title">E-mail</span>
+                                <input class="input  input-mail" type="email" name="email">
+                            </label>
+                            <label class="form-item">
+                                <span class="form-item-title">Password</span>
+                                <input class="input input-password" type="password" name="password">
+                            </label>
+                            <button class="btn btn-sign-in popup-form-btn" type="sumbit">Sign In</button>
+                        </form>
+                        <button class="popup-link" type="button">Forgot Your Password?</button>
+                        <div class="popup-line-footer"></div>
+                        <div class="popup-footer">
+                            <div class="popup-footer-text">Don’t have an account?</div>
+                            <button class="popup-footer-btn btn-register" type="button">Register</button>
+                        </div>
+                    </div>
+                    <div class="popup-signup">
+                        <h4 class="title-popup">Create account</h4>
+                        <form class="login-form-popup" action="#">
+                            <label class="form-item">
+                                <span class="form-item-title">E-mail</span>
+                                <input class="input input-mail" type="email">
+                            </label>
+                            <label class="form-item">
+                                <span class="form-item-title">Password</span>
+                                <input class="input input-password" type="password">
+                            </label>
+                            <button class="btn btn-sign-in popup-form-btn" type="button">Sign In</button>
+                        </form>
+                        <div class="popup-line-footer"></div>
+                        <div class="popup-footer">
+                            <div class="popup-footer-text">Already have an account?</div>
+                            <button class="popup-footer-btn btn-login" type="button">Log in</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
     </main>
 
     <script src="../travel/index.js"></script>
