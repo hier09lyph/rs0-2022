@@ -49,6 +49,7 @@ let popupLogin = document.querySelector('.btn-login')
 let popupSignup = document.querySelector('.popup-signup')
 
 
+
 function openSingup() {
     document.getElementsByClassName('popup-login')[0].style = "display: none";
     document.getElementsByClassName('popup-signup')[0].style = "display: block";
@@ -118,7 +119,90 @@ function getFormValue(event) {
 
 }
 
+// slider
+
+const slider = document.querySelector('.destination-slider');
+const img1 = document.querySelector('.destination-img1');
+const img2 = document.querySelector('.destination-img2');
+const img3 = document.querySelector('.destination-img3');
+const ellipseFirst = document.querySelector('.ellipse-first');
+const ellipseSecond = document.querySelector('.ellipse-second');
+const ellipseThird = document.querySelector('.ellipse-third');
+
+ellipseSecond.style.opacity = '1';
+
+if (document.documentElement.clientWidth > 390) {
+    document.addEventListener('click', (e) => { // Вешаем обработчик на весь документ
+        if (e.target === img3 || e.target === ellipseThird) { // Img3
+            slider.style.transform = 'translate(-34.5%, 0)';
+            ellipseSecond.style.opacity = '.5';
+            ellipseThird.style.opacity = '1';
+            ellipseFirst.style.opacity = '.5';
+        }
+        if (e.target === img2 || e.target === ellipseSecond) { // Img2
+            slider.style.transform = 'translate(0, 0)';
+            ellipseSecond.style.opacity = '1';
+            ellipseThird.style.opacity = '.5';
+            ellipseFirst.style.opacity = '.5';
+        }
+        if (e.target === img1 || e.target === ellipseFirst) { // Img1
+            slider.style.transform = 'translate(34%, 0)';
+            ellipseSecond.style.opacity = '.5';
+            ellipseThird.style.opacity = '.5';
+            ellipseFirst.style.opacity = '1';
+        }
+    });
+}
+
+const arrowLeft = document.querySelector('.arrow-left');
+const arrowRight = document.querySelector('.arrow-right');
+
+arrowLeft.style.opacity = '1';
+arrowRight.style.opacity = '1';
+
+if (document.documentElement.clientWidth <= 390) {
+    document.addEventListener('click', (e) => { // Вешаем обработчик на весь документ
+
+
+        if ((e.target === arrowLeft && arrowLeft.style.opacity === '1' && arrowRight.style.opacity === '1') ||
+            e.target === ellipseFirst) { // Img1
+            slider.style.transform = 'translate(34%, 0)';
+            arrowLeft.style.opacity = '0.5'
+            arrowRight.style.opacity = '1'
+            ellipseSecond.style.opacity = '.5';
+            ellipseThird.style.opacity = '.5';
+            ellipseFirst.style.opacity = '1';
+        }
 
 
 
-console.log('1.Вёрстка соответствует макету. Ширина экрана 390px +48\n2.Ни на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки. Весь контент страницы при этом сохраняется: не обрезается и не удаляется +0\n3.На ширине экрана 390рх и меньше реализовано адаптивное меню +18 \nпри клике по ссылке в адаптивном меню адаптивное меню плавно скрывается, также скрытие меню происходит если сделать клик вне данного окна +0\n\nИтого:66');
+        if ((e.target === arrowRight && arrowLeft.style.opacity === '1' && ellipseSecond.style.opacity === '1') ||
+            e.target === ellipseThird) { // Img3
+            slider.style.transform = 'translate(-34%, 0)';
+            arrowLeft.style.opacity = '1'
+            arrowRight.style.opacity = '0.5'
+            ellipseSecond.style.opacity = '.5';
+            ellipseThird.style.opacity = '1';
+            ellipseFirst.style.opacity = '.5';
+        }
+
+        if ((e.target === arrowLeft && arrowLeft.style.opacity === '1' && arrowRight.style.opacity === '0.5') ||
+            e.target === ellipseSecond) { // Img2
+            slider.style.transform = 'translate(0, 0)';
+            arrowLeft.style.opacity = '1';
+            arrowRight.style.opacity = '1';
+            ellipseSecond.style.opacity = '1';
+            ellipseThird.style.opacity = '.5';
+            ellipseFirst.style.opacity = '.5';
+        }
+        if (e.target === arrowRight && arrowRight.style.opacity === '1' && ellipseFirst.style.opacity === '1') { // Img2
+            slider.style.transform = 'translate(0, 0)';
+            arrowLeft.style.opacity = '1';
+            arrowRight.style.opacity = '1';
+            ellipseSecond.style.opacity = '1';
+            ellipseThird.style.opacity = '.5';
+            ellipseFirst.style.opacity = '.5';
+        }
+
+    });
+}

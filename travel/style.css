@@ -310,6 +310,8 @@ body {
 }
 
 .destination-slider {
+    transform: translate(0, 0);
+    transition: 1.5s;
     margin-top: 46px;
     margin-bottom: 24px;
     width: 2520px;
@@ -317,7 +319,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     overflow: hidden;
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 .destenation-text {
@@ -360,7 +362,7 @@ body {
     display: none;
 }
 
-.slider-ellipse {
+.slider-ellipses {
     /* margin-left: 48.5%; */
     display: flex;
     flex: row;
@@ -369,17 +371,11 @@ body {
     margin-bottom: 23px;
 }
 
-.slider-ellipse-center {
+.slider-ellipse {
     width: 20px;
     height: 20px;
     background: #F2785C;
-    border-radius: 10px;
-}
-
-.slider-ellipse-side {
-    width: 20px;
-    height: 20px;
-    background: rgba(242, 120, 92, 0.5);
+    opacity: .5;
     border-radius: 10px;
 }
 
@@ -622,11 +618,13 @@ body {
         width: 360px;
         height: 210px;
         background-size: cover;
-        background-image: url(../travel/img/spain-img.jpg)
+        background-image: url(../travel/img/japan-mobile.jpg)
     }
     .destination-img3 {
         width: 360px;
         height: 210px;
+        background-size: cover;
+        background-image: url(../travel/img/usa-mobile.jpg)
     }
     .burger {
         display: inline;
@@ -818,22 +816,6 @@ body {
     }
     .header-nav {
         display: none;
-    }
-    .destination-img1 {
-        width: 360px;
-        height: 210px;
-        background-size: cover;
-        background-image: url(../travel/img/spain-mobile.jpg)
-    }
-    .destination-img2 {
-        width: 360px;
-        height: 210px;
-        background-size: cover;
-        background-image: url(../travel/img/spain-img.jpg)
-    }
-    .destination-img3 {
-        width: 360px;
-        height: 210px;
     }
     .header-logo {
         margin-top: 0px;
@@ -1075,40 +1057,49 @@ body {
     /*stories end*/
     /*destination start*/
     .destination-slider {
+        transform: translate(0, 0);
+        transition: 1.5s;
         position: relative;
         margin-top: 20px;
         margin-bottom: 2px;
-        width: 2520px;
+        width: 1140px;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         overflow: hidden;
         z-index: 1;
     }
-    .slider-ellipse {
+    .destination-img1 {
+        width: 360px;
+        height: 210px;
+        background-size: cover;
+        background-image: url(../travel/img/spain-mobile.jpg)
+    }
+    .destination-img2 {
+        width: 360px;
+        height: 210px;
+        background-size: cover;
+        background-image: url(../travel/img/japan-mobile.jpg)
+    }
+    .destination-img3 {
+        width: 360px;
+        height: 210px;
+        background-size: cover;
+        background-image: url(../travel/img/usa-mobile.jpg)
+    }
+    .slider-ellipses {
         position: relative;
         margin-top: 72px;
         width: 36px;
         z-index: 2;
         margin-bottom: 5px;
     }
-    .slider-ellipse-center {
+    .slider-ellipse {
         width: 8px;
         height: 8px;
         background: #F2785C;
+        opacity: 0.5;
         border-radius: 4px;
-    }
-    .slider-ellipse-side {
-        width: 8px;
-        height: 8px;
-        background: rgba(242, 120, 92, 0.5);
-        border-radius: 4px;
-    }
-    .ellipse-first {
-        display: none;
-    }
-    .ellipse-last {
-        display: inline;
     }
     .destenation-text {
         position: absolute;
@@ -1120,12 +1111,6 @@ body {
         font-size: 20px;
         line-height: 26px;
         color: #FFFFFF;
-    }
-    .destination-img2 {
-        display: none;
-    }
-    .destination-img3 {
-        display: none;
     }
     .arrow {
         display: flex;
@@ -1142,11 +1127,13 @@ body {
         width: 14.5px;
         height: 25px;
         background-image: url(../travel/img/svg/arrow-left.svg);
+        opacity: 1;
     }
     .arrow-right {
         width: 14.5px;
         height: 25px;
         background-image: url(../travel/img/svg/arrow-right.svg);
+        opacity: 1;
     }
     /*destination end*/
     /*button start*/
