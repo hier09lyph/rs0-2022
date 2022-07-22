@@ -1126,7 +1126,8 @@ body {
     .arrow-left {
         width: 14.5px;
         height: 25px;
-        background-image: url(../travel/img/svg/arrow-left.svg);
+        background-image: url(../travel/img/svg/arrow-right.svg);
+        transform: rotate(180deg);
         opacity: 1;
     }
     .arrow-right {
