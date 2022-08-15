@@ -21,12 +21,6 @@ const quotesButton = document.querySelector('.change-quote');
 
 
 
-
-
-
-
-console.log(time)
-
 // Отображение текущего времени
 function showTime() {
     const date = new Date();
@@ -78,7 +72,7 @@ function showGreeting() {
 // Сохранение данных пользователя
 function setLocalStorage() {
     localStorage.setItem('name', name.value);
-    localStorage.getItem('city', city.value);
+    localStorage.setItem('city', city.value);
 }
 window.addEventListener('beforeunload', setLocalStorage)
 
@@ -102,7 +96,6 @@ function getRandomNum() {
 }
 
 let randomNum = getRandomNum()
-console.log(randomNum)
 
 function setBg() {
     const img = new Image();
@@ -123,7 +116,7 @@ function getSlideNext() {
     } else {
         randomNum++
     }
-    console.log(randomNum)
+    
     setBg()
 }
 
@@ -133,7 +126,7 @@ function getSlidePrev() {
     } else {
         randomNum--
     }
-    console.log(randomNum)
+    
     setBg()
 }
 
@@ -151,9 +144,7 @@ async function getWeather() {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=en&appid=b93d208e7e1d0e50227d237b5845ad39&units=metric`;
 
     const res = await fetch(url);
-
-    console.log(res.status)
-
+    
     if (res.status == 404 || city.value == '') {
         temperature.textContent = '';
         weatherDescription.textContent = '';
@@ -163,7 +154,6 @@ async function getWeather() {
     }
 
     const data = await res.json();
-
 
     weatherIcon.className = 'weather-icon owf';
     weatherIcon.classList.add(`owf-${data.weather[0].id}`);
@@ -224,22 +214,22 @@ if (quotesButton) {
 const playList = [{
         title: 'Aqua Caelestis',
         src: './assets/sounds/Aqua Caelestis.mp3',
-        duration: '00:58'
+        duration: '00:39'
     },
     {
         title: 'River Flows In You',
         src: './assets/sounds/River Flows In You.mp3',
-        duration: '03:50'
+        duration: '01:37'
     },
     {
         title: 'Ennio Morricone',
         src: './assets/sounds/Ennio Morricone.mp3',
-        duration: '03:50'
+        duration: '01:37'
     },
     {
         title: 'Summer Wind',
         src: './assets/sounds/Summer Wind.mp3',
-        duration: '03:50'
+        duration: '01:50'
     }
 ]
 
@@ -279,11 +269,10 @@ function playAudio() {
         playBtn.classList.remove("pause");
 
     }
-
-    console.log(audio.currentTime);
 }
 
 playBtn.addEventListener('click', playAudio);
+audio.addEventListener('ended', playNext);
 
 function playNext() {
     playNum < playList.length - 1 ? playNum++ : playNum = 0;
