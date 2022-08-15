@@ -221,22 +221,6 @@ if (quotesButton) {
 
 // import playList from './playList.js';
 
-// let isPlay = false;
-
-// const playBtn = document.querySelector('.play');
-// const playListUl = document.querySelector('.play-list');
-
-// function toggleBtn() {
-//     playBtn.classList.toggle('pause');
-//     isPlay === false ? isPlay = true : isPlay = false
-//     console.log(isPlay)
-// }
-
-// playBtn.addEventListener('click', toggleBtn);
-
-
-// console.log(playList);
-
 const playList = [{
         title: 'Aqua Caelestis',
         src: './assets/sounds/Aqua Caelestis.mp3',
@@ -286,8 +270,6 @@ function playAudio() {
             elem.classList.remove('item-active');
         }
         elements[playNum].classList.add('item-active');
-
-        playerLength.textContent = playList[playNum].duration;
 
 
     } else {
