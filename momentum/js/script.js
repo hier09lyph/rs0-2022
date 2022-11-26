@@ -116,7 +116,7 @@ function getSlideNext() {
     } else {
         randomNum++
     }
-    
+
     setBg()
 }
 
@@ -126,25 +126,25 @@ function getSlidePrev() {
     } else {
         randomNum--
     }
-    
+
     setBg()
 }
 
-// Виджет погоды
+// Widget wearther
 // Ссылка https://api.openweathermap.org/data/2.5/weather?q=Минск&lang=ru&appid=b93d208e7e1d0e50227d237b5845ad39&units=metric
 
 // 
 
 async function getWeather() {
     if (city.value === '') {
-        city.value = 'Minsk';
+        city.value = 'Gdansk';
     }
 
 
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=en&appid=b93d208e7e1d0e50227d237b5845ad39&units=metric`;
 
     const res = await fetch(url);
-    
+
     if (res.status == 404 || city.value == '') {
         temperature.textContent = '';
         weatherDescription.textContent = '';
